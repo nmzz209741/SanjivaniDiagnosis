@@ -1,0 +1,72 @@
+{% extends 'home.html' %}
+<head>
+    <style>
+        .forminput{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+{% block contents %}
+<section id="contact" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="ser-title">Enter the patients details</h2>
+					<hr class="botm-line">
+				</div>
+				<div class="col-md-4 col-sm-4">
+			      <h3>Diabetes Disease Prediction</h3>
+			      <div class="space"></div>
+			      <p></p>
+			    </div>
+				<div class="col-md-8 col-sm-8 marb20">
+					<div class="contact-info">
+
+							<div class="space"></div>
+                            <!--<div id="sendmessage">Your message has been sent. Thank you!</div>-->
+                            <div id="errormessage"></div>
+							<form action="/diabetesPredictionPage" method="post" role="form" class="contactForm">
+							    <div class="form-group">
+                                    <input type="text" name="glucose"  class="form-control br-radius-zero" id="name" placeholder="Blood Glucose(Enter a value between 0 to 200)" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control br-radius-zero" name="pressure" id="email" placeholder="Blood Pressure(Enter a value between 0 to 120)" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control br-radius-zero" name="insulin" id="subject" placeholder="Insulin Level(Enter a value between 0 to 1200)" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+								<div class="form-group">
+                                    <input type="text" class="form-control br-radius-zero" name="bmi" id="subject" placeholder="BMI(Enter a value between 0 to 50)" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+								<div class="form-group">
+                                    <input type="text" class="form-control br-radius-zero" name="age" id="subject" placeholder="Enter your age" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+									<div class="form-group">
+                                    <input type="text" class="form-control br-radius-zero" name="pregnancy" id="subject" placeholder="Pregnancies" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+								<div class="form-action">
+									<button id="submitbutton"  type="submit" class="btn btn-form">Submit</button>
+								</div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--cancer-->
+<!--</body>-->
+<!--</html>-->

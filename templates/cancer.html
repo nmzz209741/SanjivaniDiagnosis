@@ -1,0 +1,71 @@
+{% extends 'home.html' %}
+<head>
+    <style>
+        .forminput{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+{% block contents %}
+<section id="contact" class="section-padding">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2 class="ser-title">Enter the patients details</h2>
+					<hr class="botm-line">
+				</div>
+				<div class="col-md-4 col-sm-4">
+			      <h3>Breast Cancer Prediction</h3>
+			      <div class="space"></div>
+			      <p></p>
+			    </div>
+				<div class="col-md-8 col-sm-8 marb20">
+					<div class="contact-info">
+
+							<div class="space"></div>
+                            <!--<div id="sendmessage">Your message has been sent. Thank you!</div>-->
+                            <div id="errormessage"></div>
+							<form action="/cancerPredictionPage" method="post" role="form" class="contactForm">
+							    <div class="form-group" id="forminput">
+                                    <input type="text" name="concave points_worst" class="form-control br-radius-zero" id="name" placeholder="Concave points" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group" id="forminput">
+                                    <input type="text" class="form-control br-radius-zero" name="radius_worst" id="attr1" placeholder="Radius" data-rule="email" data-msg="Please enter a valid email" />
+                                    <div class="validation"></div>
+                                </div>
+                                <div class="form-group" id="forminput">
+                                    <input type="text" class="form-control br-radius-zero" name="area_worst" id="subject" placeholder="Area" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+								<div class="form-group" id="forminput">
+                                    <input type="text" class="form-control br-radius-zero" name="perimeter_worst" id="subject" placeholder="Perimeter" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+								<div class="form-group" id="forminput">
+                                    <input type="text" class="form-control br-radius-zero" name="concavity_worst" id="subject" placeholder="Concavity" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                    <div class="validation"></div>
+                                </div>
+
+
+
+								<div class="form-action">
+									<button id="submitbutton" type="submit" class="btn btn-form">Submit</button>
+								</div>
+							</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+{% endblock %}
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--cancer-->
+<!--</body>-->
+<!--</html>-->
